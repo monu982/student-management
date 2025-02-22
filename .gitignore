@@ -1,0 +1,26 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Logs & cache
+logs/
+*.log
+debug.log
+error.log
+coverage/
+.cache/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+find . -name ".gitignore"
+
+# Build files
+dist/
+build/
+public/
+
+
