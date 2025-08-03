@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./config/db");
 const studentRoutes = require("./routes/studentRoutes");
+const dotenv = require("dotenv").config();
 
 dotenv.config();
 const app = express();
@@ -22,7 +23,7 @@ app.get("/", (req, res) => {
 app.use("/api/students", studentRoutes);
 
 // Start Server
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
